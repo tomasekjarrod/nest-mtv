@@ -12,11 +12,17 @@ export class AuthController {
   ) {}
 
   @Post('login')
-  async login(): Promise<any> {}
+  async login(): Promise<any> {
+    return 'login'
+  }
 
   @Post('logout')
-  async logout(): Promise<any> {}
+  async logout(): Promise<any> {
+    return 'logout'
+  }
 
   @Post('signup')
-  async signup(): Promise<any> {}
+  async signup(): Promise<any> {
+    return 'signup'
+  }
 }
