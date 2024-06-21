@@ -4,6 +4,7 @@ import { AuthModule } from './auth/auth.module';
 import { AuthController } from './auth.controller';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { dataSourceOptions } from './db/ormconfig';
+import { InterviewFePrepController } from './interview-fe-prep/interview-fe-prep.controller';
 
 @Module({
   imports: [
@@ -11,6 +12,6 @@ import { dataSourceOptions } from './db/ormconfig';
     TypeOrmModule.forRoot(dataSourceOptions),
     AuthModule,
   ],
-  controllers: [AuthController],
+  controllers: [AuthController, InterviewFePrepController],
 })
 export class AppModule {}
