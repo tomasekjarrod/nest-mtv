@@ -30,6 +30,10 @@ export class UsersService {
     return this.usersRepository.findOneBy({ id });
   }
 
+  findOneByEmail(email: string): Promise<UserEntity | null> {
+    return this.usersRepository.findOneBy({ email });
+  }
+
   async remove(id: string): Promise<void> {
     await this.usersRepository.delete(id);
   }

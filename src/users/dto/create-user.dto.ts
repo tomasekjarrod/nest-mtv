@@ -7,8 +7,4 @@ export class CreateUserDto {
   @IsNotEmpty()
   @MinLength(10)
   password: string;
-
-  @IsNotEmpty()
-  @MinLength(10)
-  confirmPassword: string;
 }
